@@ -135,3 +135,7 @@ Bogota
 Bogota D.C.
 co
 yes
+
+
+/API: secure(keystoreFilePath, keystorePassword, truststoreFilePath,truststorePassword);
+secure("keystores/ecikeypair.p12", "ecistore", null, null);

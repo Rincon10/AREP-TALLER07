@@ -14,6 +14,9 @@ public class App {
      * @param args
      */
     public static void main(String[] args) {
+        //API: secure(keystoreFilePath, keystorePassword, truststoreFilePath,truststorePassword);
+        secure("keystores/ecikeystore.p12", "admin12345", null, null);
+
         //Setting the portNumber
         port(getPort());
         //staticFileLocation("/public");
@@ -41,7 +44,6 @@ public class App {
 //            res.redirect("/index.html");
 //            return "";
 //        });
-
         get(helloPath, (req, res) -> "Hello, world from spark.");
 
     }
