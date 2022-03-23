@@ -77,9 +77,12 @@ public class URLReader {
 
     }
 
-    public static void readURL(String requestedURL) {
+    public static String readURL(String requestedURL) {
+        String output="";
         try {
             // Crea el objeto que representa una URL2
+
+
             URL siteURL = new URL(requestedURL);
             // Crea el objeto que URLConnection
             URLConnection urlConnection = siteURL.openConnection();
@@ -107,11 +110,17 @@ public class URLReader {
             BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
 
             String inputLine = null;
+
             while ((inputLine = reader.readLine()) != null) {
                 System.out.println(inputLine);
+                output+= inputLine;
             }
+
+            return output;
         } catch (IOException x) {
             System.err.println(x);
+            output = x.getMessage();
         }
+        return output;
     }
 }
