@@ -120,3 +120,18 @@ en las reglas de entrada de seguridad lo configuramos con numero
     About
 
 Loading complete
+
+=============================================================
+Para la generacion de certificados
+
+Pass: admin12345
+
+keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650
+
+localhost-> aqui debe ir el nombre del servidor
+AREP
+ECI
+Bogota
+Bogota D.C.
+co
+yes
