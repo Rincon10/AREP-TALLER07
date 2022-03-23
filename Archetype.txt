@@ -136,6 +136,15 @@ Bogota D.C.
 co
 yes
 
-
+keystores mis certificados
 /API: secure(keystoreFilePath, keystorePassword, truststoreFilePath,truststorePassword);
 secure("keystores/ecikeypair.p12", "ecistore", null, null);
+
+
+
+Exportar el certificado a un archivo
+keytool -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer
+
+Importar el certificado a un TrusStore // certificados de la entidades en quien confiamos
+keytool -import -file ./ecicert.cer -alias firstCA -keystore myTrustStore
+

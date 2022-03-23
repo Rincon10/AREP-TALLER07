@@ -15,7 +15,7 @@ public class App {
      */
     public static void main(String[] args) {
         //API: secure(keystoreFilePath, keystorePassword, truststoreFilePath,truststorePassword);
-        secure("keystores/ecikeystore.p12", "admin12345", null, null);
+        secure(getKeyStore(), "admin12345", null, null);
 
         //Setting the portNumber
         port(getPort());
@@ -57,5 +57,12 @@ public class App {
             return Integer.parseInt(System.getenv("PORT"));
         }
         return 5000; //returns default port if heroku-port isn't se  (i.e. on localhost)
+    }
+
+    static String getKeyStore() {
+        if (System.getenv("KEYSTORE") != null) {
+            return System.getenv("KEYSTORE");
+        }
+        return "keystores/ecikeystore.p12"; //returns default keystore if heroku-keystore isn't se  (i.e. on localhost)
     }
 }
