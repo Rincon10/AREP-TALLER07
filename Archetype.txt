@@ -105,22 +105,6 @@ numero es el puerto el cual se mapea para que nuestra maquina lo detecte
 
 en las reglas de entrada de seguridad lo configuramos con numero
 
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-Loading complete
-
 =============================================================
 Para la generacion de certificados
 
